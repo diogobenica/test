@@ -1,0 +1,33 @@
+<%= form_for(@testis) do |f| %>
+  <% if @testis.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@testis.errors.count, "error") %> prohibited this testis from being saved:</h2>
+
+      <ul>
+      <% @testis.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :nome %><br>
+    <%= f.text_field :nome %>
+  </div>
+  <div class="field">
+    <%= f.label :pagina %><br>
+    <%= f.text_field :pagina %>
+  </div>
+  <div class="field">
+    <%= f.label :erro %><br>
+    <%= f.text_field :erro %>
+  </div>
+  <div class="field">
+    <%= f.label :defeito %><br>
+    <%= f.text_field :defeito %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

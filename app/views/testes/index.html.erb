@@ -1,0 +1,33 @@
+<h1>Listing testes</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Nome</th>
+      <th>Pagina</th>
+      <th>Erro</th>
+      <th>Defeito</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @testes.each do |testis| %>
+      <tr>
+        <td><%= testis.nome %></td>
+        <td><%= testis.pagina %></td>
+        <td><%= testis.erro %></td>
+        <td><%= testis.defeito %></td>
+        <td><%= link_to 'Show', testis %></td>
+        <td><%= link_to 'Edit', edit_testis_path(testis) %></td>
+        <td><%= link_to 'Destroy', testis, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Teste', new_testis_path %>

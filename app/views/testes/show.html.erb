@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Nome:</strong>
+  <%= @testis.nome %>
+</p>
+
+<p>
+  <strong>Pagina:</strong>
+  <%= @testis.pagina %>
+</p>
+
+<p>
+  <strong>Erro:</strong>
+  <%= @testis.erro %>
+</p>
+
+<p>
+  <strong>Defeito:</strong>
+  <%= @testis.defeito %>
+</p>
+
+<%= link_to 'Edit', edit_testis_path(@testis) %> |
+<%= link_to 'Back', testes_path %>

@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  nome: MyString
+  pagina: MyString
+  erro: MyString
+  defeito: MyString
+
+two:
+  nome: MyString
+  pagina: MyString
+  erro: MyString
+  defeito: MyString

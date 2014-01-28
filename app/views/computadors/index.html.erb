@@ -1,0 +1,35 @@
+<h1>Listing computadors</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Serial</th>
+      <th>Marca</th>
+      <th>Modelo</th>
+      <th>Cor</th>
+      <th>Placa</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @computadors.each do |computador| %>
+      <tr>
+        <td><%= computador.serial %></td>
+        <td><%= computador.marca %></td>
+        <td><%= computador.modelo %></td>
+        <td><%= computador.cor %></td>
+        <td><%= computador.placa %></td>
+        <td><%= link_to 'Show', computador %></td>
+        <td><%= link_to 'Edit', edit_computador_path(computador) %></td>
+        <td><%= link_to 'Destroy', computador, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Computador', new_computador_path %>
